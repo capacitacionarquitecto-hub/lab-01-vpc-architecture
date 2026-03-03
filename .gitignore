@@ -1,0 +1,20 @@
+# AWS credentials and configuration
+aws/
+awsConfig/
+
+# Environment variables
+scripts/env-vars.sh
+
+# Local training files
+capacitacion/
+
+# OS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml

@@ -1,23 +1,23 @@
 #!/bin/bash
-set -e  # Sale si hay error — buena práctica DevOps
+set -e  # Exit on error — DevOps best practice
 
-echo "🚀 Creando VPC..."
+echo "🚀 Creating VPC..."
 
 # Variables
 REGION="us-east-1"
 VPC_CIDR="10.0.0.0/16"
 PROJECT_NAME="lab01-vpc"
 
-# Crear VPC
+# Create VPC
 VPC_ID=$(aws ec2 create-vpc \
   --cidr-block $VPC_CIDR \
   --region $REGION \
   --query 'Vpc.VpcId' \
   --output text)
 
-echo "✅ VPC creada: $VPC_ID"
+echo "✅ VPC created: $VPC_ID"
 
-# Habilitar DNS hostnames (IMPORTANTE para que funcione bien)
+# Enable DNS hostnames (IMPORTANT for proper functionality)
 aws ec2 modify-vpc-attribute \
   --vpc-id $VPC_ID \
   --enable-dns-hostnames
@@ -26,7 +26,7 @@ aws ec2 modify-vpc-attribute \
   --vpc-id $VPC_ID \
   --enable-dns-support
 
-# Agregar tags (práctica profesional SIEMPRE taggear)
+# Add tags (professional practice: ALWAYS tag resources)
 aws ec2 create-tags \
   --resources $VPC_ID \
   --tags \
@@ -35,10 +35,10 @@ aws ec2 create-tags \
     Key=Project,Value=portfolio \
     Key=ManagedBy,Value=manual
 
-echo "✅ VPC configurada correctamente"
-echo "📌 VPC_ID=$VPC_ID — Guarda este valor!"
+echo "✅ VPC configured successfully"
+echo "📌 VPC_ID=$VPC_ID — Save this value!"
 
-# Guardar en archivo para usar en siguientes scripts
+# Save to file for use in subsequent scripts
 echo "export VPC_ID=$VPC_ID" >> ./scripts/env-vars.sh
 echo "export REGION=$REGION" >> ./scripts/env-vars.sh
 echo "export PROJECT_NAME=$PROJECT_NAME" >> ./scripts/env-vars.sh

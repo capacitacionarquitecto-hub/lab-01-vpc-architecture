@@ -1,14 +1,14 @@
 # Lab 01 - VPC Architecture
 
-Estructura base para el laboratorio de arquitectura de VPC.
+Base structure for the VPC architecture laboratory.
 
-Contenido:
-- `docs/`: diagramas y explicación de la arquitectura
-- `scripts/`: scripts para crear recursos (bash)
-- `cloudformation/`: plantilla CloudFormation `vpc-stack.yaml`
-- `tests/`: scripts de validación
+Contents:
+- `docs/`: diagrams and architecture explanation
+- `scripts/`: scripts to create resources (bash)
+- `cloudformation/`: CloudFormation template `vpc-stack.yaml`
+- `tests/`: validation scripts
 
-Instrucciones rápidas:
-1. Revisar `cloudformation/vpc-stack.yaml` antes de usar.
-2. Dar permiso de ejecución a los scripts: `chmod +x scripts/*.sh`.
-3. Ejecutar los scripts en orden o preferir desplegar con CloudFormation.
+Quick Start:
+1. Review `cloudformation/vpc-stack.yaml` before using.
+2. Grant execution permissions to scripts: `chmod +x scripts/*.sh`.
+3. Run scripts in order or prefer deployment with CloudFormation.

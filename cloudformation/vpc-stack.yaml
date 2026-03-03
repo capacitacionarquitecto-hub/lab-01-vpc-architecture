@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Plantilla CloudFormation básica para VPC lab'
+Description: 'Basic CloudFormation template for VPC lab'
 Resources:
   LabVPC:
     Type: AWS::EC2::VPC

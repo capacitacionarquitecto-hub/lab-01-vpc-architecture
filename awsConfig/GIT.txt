@@ -1,0 +1,9 @@
+# En tu terminal local
+mkdir lab-01-vpc-architecture
+cd lab-01-vpc-architecture
+git init
+git remote add origin https://github.com/TU-USUARIO/lab-01-vpc-architecture.git
+
+# Crea la estructura de carpetas
+mkdir -p docs scripts cloudformation tests
+touch README.md

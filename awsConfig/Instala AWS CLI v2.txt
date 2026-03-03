@@ -1,0 +1,14 @@
+# Instala AWS CLI v2
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# Verifica instalación
+aws --version
+
+# Configura tus credenciales
+aws configure
+# AWS Access Key ID: [tu key]
+# AWS Secret Access Key: [tu secret]
+# Default region name: us-east-1
+# Default output format: json

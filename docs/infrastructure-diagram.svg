@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 820" width="900" height="820" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1923"/>
+      <stop offset="100%" style="stop-color:#1a2535"/>
+    </linearGradient>
+    <linearGradient id="vpcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#0d2137;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="pubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a2a;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#0d2a18;stop-opacity:0.7"/>
+    </linearGradient>
+    <linearGradient id="privGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a2a1a;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#2a1508;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a1a4a;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#180d2a;stop-opacity:0.6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4fc3f7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#81c784"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ffb74d"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="820" fill="url(#bgGrad)"/>
+  
+  <!-- Grid lines subtle -->
+  <g opacity="0.05">
+    <line x1="0" y1="50" x2="900" y2="50" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="150" x2="900" y2="150" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="250" x2="900" y2="250" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="350" x2="900" y2="350" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="450" x2="900" y2="450" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="900" y2="500" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="550" x2="900" y2="550" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="900" y2="600" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="650" x2="900" y2="650" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="700" x2="900" y2="700" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="750" x2="900" y2="750" stroke="#fff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" fill="#e0f0ff" font-size="18" font-weight="700" letter-spacing="2">AWS VPC INFRASTRUCTURE</text>
+
+  <!-- INTERNET ICON -->
+  <g transform="translate(390, 42)" filter="url(#glow)">
+    <!-- Globe icon -->
+    <circle cx="60" cy="30" r="24" fill="none" stroke="#4fc3f7" stroke-width="2"/>
+    <ellipse cx="60" cy="30" rx="12" ry="24" fill="none" stroke="#4fc3f7" stroke-width="1.5"/>
+    <line x1="36" y1="30" x2="84" y2="30" stroke="#4fc3f7" stroke-width="1.5"/>
+    <line x1="39" y1="18" x2="81" y2="18" stroke="#4fc3f7" stroke-width="1"/>
+    <line x1="39" y1="42" x2="81" y2="42" stroke="#4fc3f7" stroke-width="1"/>
+    <text x="60" y="65" text-anchor="middle" fill="#4fc3f7" font-size="11" font-weight="600">INTERNET</text>
+  </g>
+
+  <!-- Arrow from Internet to Gateway -->
+  <line x1="450" y1="98" x2="450" y2="128" stroke="#4fc3f7" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+
+  <!-- Internet Gateway Box -->
+  <g transform="translate(350, 130)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#0d2137" stroke="#4fc3f7" stroke-width="2"/>
+    <!-- IGW icon: horizontal cylinder/pipe -->
+    <rect x="15" y="20" width="35" height="28" rx="4" fill="#4fc3f7" opacity="0.2"/>
+    <rect x="15" y="20" width="35" height="28" rx="4" fill="none" stroke="#4fc3f7" stroke-width="1.5"/>
+    <path d="M15,28 Q32.5,34 50,28" fill="none" stroke="#4fc3f7" stroke-width="1.5"/>
+    <path d="M15,36 Q32.5,42 50,36" fill="none" stroke="#4fc3f7" stroke-width="1.5"/>
+    <text x="62" y="31" fill="#e0f0ff" font-size="11" font-weight="600">Internet</text>
+    <text x="62" y="46" fill="#e0f0ff" font-size="11" font-weight="600">Gateway</text>
+    <text x="100" y="62" text-anchor="middle" fill="#4fc3f7" font-size="9" opacity="0.7">IGW</text>
+  </g>
+
+  <!-- Arrow from IGW to VPC -->
+  <line x1="450" y1="200" x2="450" y2="225" stroke="#4fc3f7" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+
+  <!-- VPC Container -->
+  <rect x="50" y="228" width="800" height="565" rx="12" fill="url(#vpcGrad)" stroke="#4fc3f7" stroke-width="2" stroke-dasharray="10,4"/>
+  <text x="70" y="252" fill="#4fc3f7" font-size="13" font-weight="700">VPC: 10.0.0.0/16</text>
+  <!-- AWS cloud icon small -->
+  <g transform="translate(760, 235)" opacity="0.5">
+    <path d="M30,12 Q30,4 22,4 Q20,0 14,0 Q6,0 4,8 Q0,9 0,14 Q0,20 6,20 L30,20 Q36,20 36,14 Q36,8 30,12Z" fill="#4fc3f7"/>
+    <text x="18" y="30" text-anchor="middle" fill="#4fc3f7" font-size="8">AWS</text>
+  </g>
+
+  <!-- PUBLIC SUBNETS Section -->
+  <rect x="75" y="265" width="750" height="165" rx="8" fill="url(#pubGrad)" stroke="#81c784" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="95" y="285" fill="#81c784" font-size="12" font-weight="700">PUBLIC SUBNETS</text>
+  <text x="95" y="300" fill="#81c784" font-size="9" opacity="0.8">AZ-1a: 10.0.1.0/24  |  AZ-1b: 10.0.2.0/24</text>
+
+  <!-- Bastion Host -->
+  <g transform="translate(150, 312)" filter="url(#shadow)">
+    <rect x="0" y="0" width="145" height="95" rx="8" fill="#0d1f17" stroke="#81c784" stroke-width="1.5"/>
+    <!-- Server/terminal icon -->
+    <rect x="12" y="10" width="40" height="30" rx="3" fill="#81c784" opacity="0.2"/>
+    <rect x="12" y="10" width="40" height="30" rx="3" fill="none" stroke="#81c784" stroke-width="1.5"/>
+    <rect x="12" y="44" width="40" height="6" rx="2" fill="#81c784" opacity="0.4"/>
+    <line x1="18" y1="20" x2="30" y2="20" stroke="#81c784" stroke-width="1"/>
+    <line x1="18" y1="26" x2="26" y2="26" stroke="#81c784" stroke-width="1"/>
+    <line x1="18" y1="32" x2="34" y2="32" stroke="#81c784" stroke-width="1"/>
+    <text x="60" y="25" fill="#e0f0ff" font-size="11" font-weight="600">Bastion</text>
+    <text x="60" y="40" fill="#e0f0ff" font-size="11" font-weight="600">Host</text>
+    <text x="72" y="75" text-anchor="middle" fill="#81c784" font-size="9" opacity="0.7">EC2 / SSH Jump</text>
+    <rect x="5" y="60" width="10" height="14" rx="2" fill="none" stroke="#81c784" stroke-width="1" opacity="0.5"/>
+    <path d="M8,60 L8,56 Q10,52 12,56 L12,60" fill="none" stroke="#81c784" stroke-width="1" opacity="0.5"/>
+    <text x="72" y="90" text-anchor="middle" fill="#81c784" font-size="8" opacity="0.5">10.0.1.10</text>
+  </g>
+
+  <!-- NAT Gateway -->
+  <g transform="translate(540, 312)" filter="url(#shadow)">
+    <rect x="0" y="0" width="145" height="95" rx="8" fill="#0d1f17" stroke="#81c784" stroke-width="1.5"/>
+    <!-- NAT icon: arrows cycling -->
+    <circle cx="26" cy="28" r="16" fill="#81c784" opacity="0.15"/>
+    <circle cx="26" cy="28" r="16" fill="none" stroke="#81c784" stroke-width="1.5"/>
+    <path d="M16,22 Q26,16 36,22" fill="none" stroke="#81c784" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <path d="M36,34 Q26,40 16,34" fill="none" stroke="#81c784" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+    <text x="52" y="25" fill="#e0f0ff" font-size="11" font-weight="600">NAT</text>
+    <text x="52" y="40" fill="#e0f0ff" font-size="11" font-weight="600">Gateway</text>
+    <text x="72" y="75" text-anchor="middle" fill="#81c784" font-size="9" opacity="0.7">Managed NAT GW</text>
+    <text x="72" y="90" text-anchor="middle" fill="#81c784" font-size="8" opacity="0.5">10.0.2.5 (EIP)</text>
+  </g>
+
+  <!-- Arrow from NAT to Private -->
+  <line x1="612" y1="407" x2="612" y2="450" stroke="#ffb74d" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowOrange)"/>
+
+  <!-- PRIVATE SUBNETS Section -->
+  <rect x="75" y="455" width="750" height="165" rx="8" fill="url(#privGrad)" stroke="#ffb74d" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="95" y="475" fill="#ffb74d" font-size="12" font-weight="700">PRIVATE SUBNETS</text>
+  <text x="95" y="490" fill="#ffb74d" font-size="9" opacity="0.8">AZ-1a: 10.0.10.0/24  |  AZ-1b: 10.0.11.0/24</text>
+
+  <!-- App Server 1 -->
+  <g transform="translate(150, 502)" filter="url(#shadow)">
+    <rect x="0" y="0" width="145" height="95" rx="8" fill="#2a1505" stroke="#ffb74d" stroke-width="1.5"/>
+    <!-- App/server icon -->
+    <rect x="10" y="8" width="42" height="55" rx="4" fill="#ffb74d" opacity="0.15"/>
+    <rect x="10" y="8" width="42" height="55" rx="4" fill="none" stroke="#ffb74d" stroke-width="1.5"/>
+    <rect x="14" y="14" width="34" height="6" rx="2" fill="#ffb74d" opacity="0.5"/>
+    <rect x="14" y="24" width="34" height="6" rx="2" fill="#ffb74d" opacity="0.3"/>
+    <rect x="14" y="34" width="34" height="6" rx="2" fill="#ffb74d" opacity="0.3"/>
+    <rect x="14" y="44" width="20" height="4" rx="1" fill="#ffb74d" opacity="0.5"/>
+    <circle cx="40" cy="56" r="3" fill="#ffb74d" opacity="0.6"/>
+    <text x="62" y="28" fill="#e0f0ff" font-size="11" font-weight="600">App</text>
+    <text x="62" y="43" fill="#e0f0ff" font-size="11" font-weight="600">Server 1</text>
+    <text x="72" y="75" text-anchor="middle" fill="#ffb74d" font-size="9" opacity="0.7">EC2 Instance</text>
+    <text x="72" y="88" text-anchor="middle" fill="#ffb74d" font-size="8" opacity="0.5">10.0.10.10</text>
+  </g>
+
+  <!-- App Server 2 -->
+  <g transform="translate(540, 502)" filter="url(#shadow)">
+    <rect x="0" y="0" width="145" height="95" rx="8" fill="#2a1505" stroke="#ffb74d" stroke-width="1.5"/>
+    <rect x="10" y="8" width="42" height="55" rx="4" fill="#ffb74d" opacity="0.15"/>
+    <rect x="10" y="8" width="42" height="55" rx="4" fill="none" stroke="#ffb74d" stroke-width="1.5"/>
+    <rect x="14" y="14" width="34" height="6" rx="2" fill="#ffb74d" opacity="0.5"/>
+    <rect x="14" y="24" width="34" height="6" rx="2" fill="#ffb74d" opacity="0.3"/>
+    <rect x="14" y="34" width="34" height="6" rx="2" fill="#ffb74d" opacity="0.3"/>
+    <rect x="14" y="44" width="20" height="4" rx="1" fill="#ffb74d" opacity="0.5"/>
+    <circle cx="40" cy="56" r="3" fill="#ffb74d" opacity="0.6"/>
+    <text x="62" y="28" fill="#e0f0ff" font-size="11" font-weight="600">App</text>
+    <text x="62" y="43" fill="#e0f0ff" font-size="11" font-weight="600">Server 2</text>
+    <text x="72" y="75" text-anchor="middle" fill="#ffb74d" font-size="9" opacity="0.7">EC2 Instance</text>
+    <text x="72" y="88" text-anchor="middle" fill="#ffb74d" font-size="8" opacity="0.5">10.0.11.10</text>
+  </g>
+
+  <!-- Arrow from Private to Data -->
+  <line x1="450" y1="620" x2="450" y2="645" stroke="#ce93d8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowOrange)"/>
+  <!-- Fix arrow color for data -->
+  <defs>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ce93d8"/>
+    </marker>
+  </defs>
+  <line x1="450" y1="620" x2="450" y2="645" stroke="#ce93d8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowPurple)"/>
+
+  <!-- DATA SUBNETS Section -->
+  <rect x="75" y="648" width="750" height="130" rx="8" fill="url(#dataGrad)" stroke="#ce93d8" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="95" y="668" fill="#ce93d8" font-size="12" font-weight="700">DATA SUBNETS</text>
+  <text x="95" y="683" fill="#ce93d8" font-size="9" opacity="0.8">AZ-1a: 10.0.20.0/24  |  AZ-1b: 10.0.21.0/24</text>
+
+  <!-- RDS Primary -->
+  <g transform="translate(150, 693)" filter="url(#shadow)">
+    <rect x="0" y="0" width="145" height="70" rx="8" fill="#180a2a" stroke="#ce93d8" stroke-width="1.5"/>
+    <!-- DB cylinder icon -->
+    <ellipse cx="26" cy="15" rx="14" ry="5" fill="#ce93d8" opacity="0.3"/>
+    <ellipse cx="26" cy="15" rx="14" ry="5" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+    <rect x="12" y="15" width="28" height="28" fill="#ce93d8" opacity="0.1"/>
+    <rect x="12" y="15" width="28" height="28" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+    <ellipse cx="26" cy="43" rx="14" ry="5" fill="#ce93d8" opacity="0.2"/>
+    <ellipse cx="26" cy="43" rx="14" ry="5" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+    <!-- Primary star -->
+    <text x="52" y="22" fill="#e0f0ff" font-size="11" font-weight="600">RDS</text>
+    <text x="52" y="37" fill="#e0f0ff" font-size="11" font-weight="600">Primary</text>
+    <text x="72" y="58" text-anchor="middle" fill="#ce93d8" font-size="8" opacity="0.5">10.0.20.10</text>
+    <!-- Primary badge -->
+    <circle cx="132" cy="12" r="10" fill="#ce93d8" opacity="0.3"/>
+    <text x="132" y="16" text-anchor="middle" fill="#ce93d8" font-size="8" font-weight="700">1°</text>
+  </g>
+
+  <!-- Replication arrow between RDS -->
+  <line x1="295" y1="728" x2="540" y2="728" stroke="#ce93d8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="418" y="722" text-anchor="middle" fill="#ce93d8" font-size="8" opacity="0.7">sync replication</text>
+
+  <!-- RDS Standby -->
+  <g transform="translate(540, 693)" filter="url(#shadow)">
+    <rect x="0" y="0" width="145" height="70" rx="8" fill="#180a2a" stroke="#ce93d8" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <!-- DB cylinder icon -->
+    <ellipse cx="26" cy="15" rx="14" ry="5" fill="#ce93d8" opacity="0.2"/>
+    <ellipse cx="26" cy="15" rx="14" ry="5" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+    <rect x="12" y="15" width="28" height="28" fill="#ce93d8" opacity="0.07"/>
+    <rect x="12" y="15" width="28" height="28" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+    <ellipse cx="26" cy="43" rx="14" ry="5" fill="#ce93d8" opacity="0.15"/>
+    <ellipse cx="26" cy="43" rx="14" ry="5" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+    <text x="52" y="22" fill="#e0f0ff" font-size="11" font-weight="600">RDS</text>
+    <text x="52" y="37" fill="#e0f0ff" font-size="11" font-weight="600">Standby</text>
+    <text x="72" y="58" text-anchor="middle" fill="#ce93d8" font-size="8" opacity="0.5">10.0.21.10</text>
+    <!-- Standby badge -->
+    <circle cx="132" cy="12" r="10" fill="#ce93d8" opacity="0.15"/>
+    <text x="132" y="16" text-anchor="middle" fill="#ce93d8" font-size="8" font-weight="700">2°</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(55, 790)">
+    <rect x="0" y="0" width="10" height="10" rx="2" fill="none" stroke="#81c784" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="15" y="9" fill="#81c784" font-size="9">Public Subnet</text>
+    <rect x="110" y="0" width="10" height="10" rx="2" fill="none" stroke="#ffb74d" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="125" y="9" fill="#ffb74d" font-size="9">Private Subnet</text>
+    <rect x="230" y="0" width="10" height="10" rx="2" fill="none" stroke="#ce93d8" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="245" y="9" fill="#ce93d8" font-size="9">Data Subnet</text>
+    <rect x="340" y="0" width="10" height="10" rx="2" fill="none" stroke="#4fc3f7" stroke-width="1.5" stroke-dasharray="5,2"/>
+    <text x="355" y="9" fill="#4fc3f7" font-size="9">VPC Boundary</text>
+  </g>
+
+  <!-- AZ labels -->
+  <text x="222" y="308" text-anchor="middle" fill="#81c784" font-size="10" opacity="0.6">AZ-1a</text>
+  <text x="612" y="308" text-anchor="middle" fill="#81c784" font-size="10" opacity="0.6">AZ-1b</text>
+  <text x="222" y="498" text-anchor="middle" fill="#ffb74d" font-size="10" opacity="0.6">AZ-1a</text>
+  <text x="612" y="498" text-anchor="middle" fill="#ffb74d" font-size="10" opacity="0.6">AZ-1b</text>
+  <text x="222" y="690" text-anchor="middle" fill="#ce93d8" font-size="10" opacity="0.6">AZ-1a</text>
+  <text x="612" y="690" text-anchor="middle" fill="#ce93d8" font-size="10" opacity="0.6">AZ-1b</text>
+
+</svg>
